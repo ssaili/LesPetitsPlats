@@ -49,21 +49,27 @@ export function manageSearch() {
   filterByTag("ustensil", 2);
 }
 
-//Fonction qui filtre via la barre de recherhce
+//Fonction qui filtre avec la barre de recherche
 function filterRecipesWithSearchBar() {
-  filteredRecipes = recipes.filter(
-    (recipe) =>
-      recipe.name.toLowerCase().includes(headerFormInput.value.toLowerCase()) ||
-      recipe.ingredients.some((item) =>
+  filteredRecipes = [];
+  for (let i = 0; i < recipes.length; i++) {
+    if (
+      recipes[i].name
+        .toLowerCase()
+        .includes(headerFormInput.value.toLowerCase()) ||
+      recipes[i].ingredients.some((item) =>
         item.ingredient
           .toLowerCase()
           .includes(headerFormInput.value.toLowerCase())
       ) ||
-      recipe.description
+      recipes[i].description
         .toLowerCase()
         .split(/,| |\.|\(|\)/)
         .includes(headerFormInput.value.toLowerCase())
-  );
+    ) {
+      filteredRecipes.push(recipes[i]);
+    }
+  }
 }
 
 //Fonction qui supprime les doublons d'un tableau
