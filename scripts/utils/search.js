@@ -102,6 +102,7 @@ const filterDropdownContent = document.querySelectorAll(
 );
 const filterChevronIcon = document.querySelectorAll(".filter__chevron-icon");
 const badgesSection = document.querySelector(".badges");
+const filterSearch = document.querySelectorAll(".filter__search-input");
 
 //Fonction qui ouvre ou ferme le contenu du bouton filtre
 function openCloseFilter(i) {
@@ -158,6 +159,18 @@ function filterRecipesWithTags() {
 
 //Fonction qui affiche un badge lors du clic sur un élément d'un filtre
 function filterByTag(filterName, i) {
+  filterSearch[i].addEventListener("input", (e) => {
+    for (const item of document.querySelectorAll(
+      `.filter__${filterName}-link`
+    )) {
+      if (item.innerText.includes(e.target.value)) {
+        item.setAttribute("style", "display: block;");
+      } else {
+        item.setAttribute("style", "display: none;");
+      }
+    }
+  });
+
   filterDropdownContent[i].addEventListener("click", (e) => {
     if (e.target.classList.contains(`filter__${filterName}-link`)) {
       if (!selectedTags.includes(e.target.innerText)) {
@@ -169,8 +182,6 @@ function filterByTag(filterName, i) {
         selectedTags.push(e.target.innerText);
       }
 
-      console.log(selectedTags);
-
       if (headerFormInput.value.length > 2) {
         filterRecipesWithSearchBar();
       }
@@ -178,6 +189,7 @@ function filterByTag(filterName, i) {
       filterRecipesWithTags();
 
       openCloseFilter(i);
+      filterSearch[i].value = "";
     }
   });
 
@@ -187,8 +199,6 @@ function filterByTag(filterName, i) {
         Array.from(badgesSection.children).indexOf(e.target.parentElement),
         1
       );
-
-      console.log(selectedTags);
 
       filteredRecipes = [...recipes];
 
