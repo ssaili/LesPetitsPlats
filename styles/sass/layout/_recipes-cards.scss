@@ -1,0 +1,72 @@
+.recipes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  row-gap: 66px;
+
+  &__card {
+    position: relative;
+    width: 380px;
+    height: 731px;
+    background-color: white;
+    border-radius: 21px;
+  }
+
+  &__phantom-card {
+    visibility: hidden;
+    width: 380px;
+  }
+
+  &__duration {
+    position: absolute;
+    background-color: #ffd15b;
+    width: 63px;
+    height: 26px;
+    border-radius: 14px;
+    top: 21px;
+    left: 295px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__image {
+    border-radius: 21px 21px 0 0;
+    width: 380px;
+    height: 253px;
+    object-fit: cover;
+  }
+
+  &__details {
+    padding-inline: 25px;
+    padding-block: 32px;
+  }
+
+  &__title {
+    padding-top: 29px;
+    padding-bottom: 15px;
+  }
+
+  &__steps {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+  }
+
+  &__ingredients {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  &__ingredients-name {
+    width: 155px;
+  }
+
+  &__ingredients-name::first-letter {
+    text-transform: capitalize;
+  }
+}

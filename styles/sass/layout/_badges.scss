@@ -1,0 +1,24 @@
+.badges {
+  padding-bottom: 55px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+
+  &__badge {
+    width: 169px;
+    height: 53px;
+    padding-inline: 17px;
+    background-color: #ffd15b;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-family: "Manrope", sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+  }
+
+  &__badge::first-letter {
+    text-transform: capitalize;
+  }
+}

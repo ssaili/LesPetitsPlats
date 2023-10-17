@@ -1,0 +1,64 @@
+.header {
+  height: 667px;
+  background-image: url("../../images/header/header-background-image.jpg");
+  background-repeat: no-repeat;
+
+  &__logo {
+    padding-left: 69px;
+    padding-top: 51px;
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  &__logo-circle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20px;
+    height: 20px;
+    border: 2px white solid;
+    border-radius: 50%;
+  }
+
+  &__logo-circle-fill {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: white;
+  }
+
+  &__title {
+    padding-top: 134px;
+    text-align: center;
+  }
+
+  &__form {
+    padding-top: 29px;
+    text-align: center;
+  }
+
+  &__form-input {
+    border: none;
+    height: 72px;
+    width: 66.25%;
+    border-radius: 11px;
+    padding: 0 80px 0 10px;
+  }
+
+  &__form-button {
+    margin-left: -64px;
+    width: 51px;
+    height: 52px;
+    border: none;
+    border-radius: 10px;
+    background-color: #1b1b1b;
+    vertical-align: middle;
+  }
+  &__form-button:hover {
+    background-color: #ffd15b;
+  }
+}

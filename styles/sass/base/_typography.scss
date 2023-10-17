@@ -1,0 +1,90 @@
+.header {
+  font-family: "Anton", sans-serif;
+
+  &__logo {
+    font-size: 40px;
+    color: white;
+    text-transform: uppercase;
+  }
+
+  &__title {
+    font-size: 44px;
+    font-weight: 400;
+    color: #ffd15b;
+  }
+
+  &__form-icon {
+    font-size: 24px;
+    color: white;
+  }
+}
+
+.filter {
+  font-family: "Manrope", sans-serif;
+  &__btn {
+    color: #1b1b1b;
+    font-size: 16px;
+    font-weight: 500;
+  }
+
+  &__search-input {
+    font-size: 14px;
+    font-weight: 400;
+    color: #7a7a7a;
+  }
+
+  &__search-icon {
+    color: #c6c6c6;
+  }
+
+  &__dropdown-content a {
+    font-size: 14px;
+    font-weight: 400;
+    color: #1b1b1b;
+  }
+
+  &__number {
+    font-family: "Anton", sans-serif;
+    font-size: 21px;
+    font-weight: 400;
+  }
+}
+
+.recipes {
+  font-family: "Manrope", sans-serif;
+
+  &__duration {
+    font-weight: 400;
+    font-size: 12px;
+  }
+
+  &__name {
+    font-family: "Anton", sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+  }
+
+  &__title {
+    font-weight: 700;
+    font-size: 12px;
+    color: #7a7a7a;
+  }
+
+  &__steps {
+    font-weight: 400;
+    font-size: 14px;
+    color: #1b1b1b;
+  }
+
+  &__ingredients-name {
+    font-weight: 500;
+    font-size: 14px;
+    color: #1b1b1b;
+  }
+
+  &__ingredients-quantity {
+    font-weight: 400;
+    font-size: 14px;
+    color: #7a7a7a;
+  }
+}
